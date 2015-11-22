@@ -1,5 +1,5 @@
 
-CC := g++ -std=c++11
+CC := g++ -std=c++11 -g
 SRCDIR := src
 BUILDDIR := build
 TARGET := bin/runner

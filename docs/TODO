@@ -1,0 +1,6 @@
+learn about gdb
+find a test runner for c++
+
+update makefile to allow a optional parameter for a release version (exclude -g from the g++ line)
+
+create uml diagram for the FileReader classes

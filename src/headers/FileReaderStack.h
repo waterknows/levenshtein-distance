@@ -1,22 +1,26 @@
-#ifndef FILEREADER_STDOUT_H
-#define FILEREADER_STDOUT_H
+#ifndef FILEREADER_STACK_H
+#define FILEREADER_STACK_H
 
 #include <string>
 #include "FileReader.h"
+#include <stack>
 #include <fstream>
 
-class FileReaderStdOut : public FileReader {
+class FileReaderStack : public FileReader {
 private:
-  FileReaderStdOut();
+  FileReaderStack();
   std::string filepath;
   std::ifstream inputFile;
+  std::stack<std::string> stack;
 
 public:
-  FileReaderStdOut(std::string filepath);
-  ~FileReaderStdOut();
+  FileReaderStack(std::string filepath);
+  ~FileReaderStack();
   void readLine(void); //reads a line and prints it to stdout
   void readFile(void); //reads the file line by line and prints it to stdout
   std::string getFilePath(void);
 };
+
+
 
 #endif
