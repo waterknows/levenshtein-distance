@@ -1,5 +1,5 @@
 
-CC := g++ -std=c++11 -g
+CC := g++ -pthread -std=c++11 -g
 SRCDIR := src
 BUILDDIR := build
 TARGET := bin/runner
@@ -30,5 +30,6 @@ tester:
 	$(CC) $(CFLAGS) test/testFileReaderStdOut.cpp $(INC) $(LIB) -o bin/tests/fileReaderStdOut
 	$(CC) $(CFLAGS) test/testLevensteinDistance.cpp $(INC) $(LIB) -o bin/tests/levenshteinDistance
 	$(CC) $(CFLAGS) test/testDictionary.cpp $(INC) $(LIB) -o bin/tests/dictionary
+	$(CC) $(CFLAGS) test/testThreading.cpp $(INC) $(LIB) -o bin/tests/threading
 
 .PHONY: clean
