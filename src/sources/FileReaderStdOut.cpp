@@ -13,7 +13,9 @@ std::string FileReaderStdOut::getFilePath() {
 
 void FileReaderStdOut::readLine() {
   std::string line;
-  std::getline(inputFile, line);
+  if (!std::getline(inputFile, line)) {
+    inputFile.close();
+  }
   std::cout << line << "\n";
 }
 
@@ -23,6 +25,20 @@ void FileReaderStdOut::readFile() {
   }
 }
 
+int FileReaderStdOut::getUnparsedStringSize(void) {
+  return 0; //there are never unparsed strings since they go to stdout
+}
+
+bool FileReaderStdOut::isFileStillOpen(void) {
+  return inputFile.is_open();
+}
+
+std::string FileReaderStdOut::getUnparsedString(void) {
+  return "";
+}
+
 FileReaderStdOut::~FileReaderStdOut() {
-  inputFile.close();
+  if (inputFile.is_open()) {
+    inputFile.close();
+  }
 }

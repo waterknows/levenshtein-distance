@@ -19,7 +19,11 @@ public:
   void readLine(void); //reads a line and prints it to stdout
   void readFile(void); //reads the file line by line and prints it to stdout
   std::string getFilePath(void);
-  std::stack<std::string>* getStack(void); //return pointer to the internal stack
+
+  int getUnparsedStringSize(void);
+  bool isFileStillOpen(void);
+
+  std::string getUnparsedString(void);
 };
 
 

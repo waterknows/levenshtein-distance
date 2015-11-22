@@ -15,15 +15,20 @@ BOOST_AUTO_TEST_CASE(testFileReaderStdOut) {
 
   f->readLine();
 
-  std::stack<std::string>* frstack = f->getStack();
+  int i = f->getUnparsedStringSize();
 
-  int i = frstack->size();
+  f->readLine();
 
-  std::string testString = frstack->top();
-  frstack->pop();
-
-  int j = frstack->size();
+  int j = f->getUnparsedStringSize();
 
   BOOST_CHECK(i == 1);
-  BOOST_CHECK(j == 0);
+  BOOST_CHECK(j == 2);
+
+  std::string s1 = f->getUnparsedString();
+  std::string s2 = f->getUnparsedString();
+
+  BOOST_CHECK(f->getUnparsedStringSize() == 0);
+
+  BOOST_CHECK("this is the second test string" == s1); //these are terrible test cases. They are way too fragile.
+  BOOST_CHECK("this is a test string" == s2);
 }

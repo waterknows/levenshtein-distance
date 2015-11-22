@@ -15,7 +15,9 @@ std::string FileReaderStack::getFilePath() {
 
 void FileReaderStack::readLine() {
   std::string line;
-  std::getline(inputFile, line);
+  if (!std::getline(inputFile, line)) {
+    inputFile.close();
+  }
   stack->push(std::string(line));
 }
 
@@ -25,10 +27,23 @@ void FileReaderStack::readFile() {
   }
 }
 
-std::stack<std::string>* FileReaderStack::getStack() {
-  return stack;
+int FileReaderStack::getUnparsedStringSize(void) {
+  return stack->size();
+}
+
+bool FileReaderStack::isFileStillOpen(void) {
+  return inputFile.is_open();
+}
+
+std::string FileReaderStack::getUnparsedString(void) {
+  std::string out;
+  out = stack->top();
+  stack->pop();
+  return out;
 }
 
 FileReaderStack::~FileReaderStack() {
-  inputFile.close();
+  if (inputFile.is_open()) {
+    inputFile.close();
+  }
 }
