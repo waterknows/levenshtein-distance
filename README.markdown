@@ -7,4 +7,4 @@ For reference check out the "Levenshtein distance"
 All the following are done from the root of the project directory
 To make the app, run 'make'.
 If the build folder gets completely messed up, run 'make clean'
-TODO: look into testing frameworks and get 'make test' working
+run the file in the ./bin file (makefile outputs it as runner)

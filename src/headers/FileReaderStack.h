@@ -11,7 +11,7 @@ private:
   FileReaderStack();
   std::string filepath;
   std::ifstream inputFile;
-  std::stack<std::string> stack;
+  std::stack<std::string>* stack;
 
 public:
   FileReaderStack(std::string filepath);
@@ -19,6 +19,7 @@ public:
   void readLine(void); //reads a line and prints it to stdout
   void readFile(void); //reads the file line by line and prints it to stdout
   std::string getFilePath(void);
+  std::stack<std::string>* getStack(void); //return pointer to the internal stack
 };
 
 

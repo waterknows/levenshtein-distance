@@ -9,12 +9,19 @@
 #include "./headers/FileReaderStack.h"
 
 main() {
-  FileReader* f = new FileReaderStdOut("/home/jeff/levenshtein-c/bin/test.txt");
+  FileReaderStack* f = new FileReaderStack("/home/jeff/levenshtein-c/bin/test.txt");
   std::cout << f->getFilePath() << std::endl;
 
-  f->readFile();
+  f->readLine();
 
-  int i = 1/0;
+  std::stack<std::string>* frstack = f->getStack();
+
+  int i = frstack->size();
+
+  std::string testString = frstack->top();
+  frstack->pop();
+
+  int j = frstack->size();
 
   return 0;
 }

@@ -26,6 +26,6 @@ clean:
 
 # Tests
 tester:
-	$(CC) $(CFLAGS) test/tester.cpp $(INC) $(LIB) -o bin/tester
+	$(CC) $(CFLAGS) test/testFileReaderStdOut.cpp $(INC) $(LIB) -o bin/tester
 
 .PHONY: clean
