@@ -1,5 +1,4 @@
 #include "../headers/FileReaderStdOut.h"
-#include <fstream>
 #include <iostream>
 
 FileReaderStdOut::FileReaderStdOut(std::string filepath) {

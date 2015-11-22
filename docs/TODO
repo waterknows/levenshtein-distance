@@ -2,6 +2,8 @@ update makefile to run all tests in the test/ folder
 
 update makefile to allow a optional parameter for a release version (exclude -g from the g++ line)
 
-create uml diagram for the FileReader classes
+update the raw pointers to C++ 11 smart pointers
+
+add make_dictionary.sh to the make file. (possibly add a clean step to remove the file?)
 
 set up jenkins for CI

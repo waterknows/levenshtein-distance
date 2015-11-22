@@ -29,5 +29,6 @@ tester:
 	$(CC) $(CFLAGS) test/testFileReaderStack.cpp $(INC) $(LIB) -o bin/tests/fileReaderStack
 	$(CC) $(CFLAGS) test/testFileReaderStdOut.cpp $(INC) $(LIB) -o bin/tests/fileReaderStdOut
 	$(CC) $(CFLAGS) test/testLevensteinDistance.cpp $(INC) $(LIB) -o bin/tests/levenshteinDistance
+	$(CC) $(CFLAGS) test/testDictionary.cpp $(INC) $(LIB) -o bin/tests/dictionary
 
 .PHONY: clean

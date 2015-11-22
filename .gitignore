@@ -2,5 +2,8 @@
 build
 lib/*
 
+#ignore the dictionary file as its 917K
+config/dictionary.txt
+
 # ignore executables
 bin/*

@@ -1,7 +1,4 @@
 #include "../headers/FileReaderStack.h"
-#include <fstream>
-#include <iostream>
-#include <stack>
 
 FileReaderStack::FileReaderStack(std::string filepath) {
   this->filepath = filepath;
@@ -46,4 +43,5 @@ FileReaderStack::~FileReaderStack() {
   if (inputFile.is_open()) {
     inputFile.close();
   }
+  delete stack;
 }

@@ -1,5 +1,5 @@
 #define BOOST_TEST_DYN_LINK
-#define BOOST_TEST_MODULE FileReaderStdOut
+#define BOOST_TEST_MODULE Levenshtein
 #include <boost/test/included/unit_test.hpp>
 
 #include <iostream>
@@ -91,6 +91,9 @@ BOOST_AUTO_TEST_CASE(test_recursive) {
   std::cout << "ending" << '\n';
 
   BOOST_CHECK(3 == val);
+
+  BOOST_CHECK(recursiveLevenshtein(testString, testString.length(),
+     testString, testString.length()) == 0);
 }
 
 BOOST_AUTO_TEST_CASE(test_dynamic) {
@@ -103,4 +106,6 @@ BOOST_AUTO_TEST_CASE(test_dynamic) {
   std::cout << "ending" << '\n';
 
   BOOST_CHECK(3 == val);
+
+  BOOST_CHECK(LevenshteinTwoRows(testString, testString) == 0);
 }
