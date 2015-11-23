@@ -9,12 +9,13 @@
 #include "./headers/Dictionary.h"
 #include "./headers/LevenshteinChecker.h"
 #include "./headers/LevenshteinCheckerRecursive.h"
+#include "./headers/LevenshteinCheckerDynamic.h"
 
 main() {
   auto f = new FileReaderStack("./config/strings.txt");
   auto dict = new Dictionary("./config/dictionary.txt");
   f->readFile();
-  auto checker = new LevenshteinCheckerRecursive(dict, f);
+  auto checker = new LevenshteinCheckerDynamic(dict, f);
 
   std::cout << "init finished" << std::endl;
 
