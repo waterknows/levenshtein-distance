@@ -1,3 +1,5 @@
+look up virtual destructors, they might have not been done correctly
+
 update makefile to run all tests in the test/ folder
 
 update makefile to allow a optional parameter for a release version (exclude -g from the g++ line)

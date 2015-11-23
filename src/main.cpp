@@ -1,14 +1,28 @@
 #include <iostream>
 #include <string>
 #include <thread>
-#include <vector>
 #include <mutex>
 
 #include "./headers/FileReader.h"
 #include "./headers/FileReaderStdOut.h"
 #include "./headers/FileReaderStack.h"
 #include "./headers/Dictionary.h"
+#include "./headers/LevenshteinChecker.h"
+#include "./headers/LevenshteinCheckerRecursive.h"
 
 main() {
+  auto f = new FileReaderStack("./config/strings.txt");
+  auto dict = new Dictionary("./config/dictionary.txt");
+  f->readFile();
+  auto checker = new LevenshteinCheckerRecursive(dict, f);
 
+  std::cout << "init finished" << std::endl;
+
+  checker->checkAgainstDictionary(); //returns empty string...
+  checker->checkAgainstDictionary();
+  checker->checkAgainstDictionary();
+  checker->checkAgainstDictionary();
+
+  std::cout << std::endl;
+  return 0;
 }
