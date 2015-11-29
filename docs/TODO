@@ -8,4 +8,7 @@ update the raw pointers to C++ 11 smart pointers
 
 add make_dictionary.sh to the make file. (possibly add a clean step to remove the file?)
 
+clean up the LevenshteinChecker inheritance diagram. It makes more sense that they should use composition instead
+as the only method thats changing is the levenshteinDistance calculation.
+
 set up jenkins for CI
