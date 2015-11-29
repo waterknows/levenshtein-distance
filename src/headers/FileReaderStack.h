@@ -7,6 +7,10 @@
 #include <fstream>
 
 class FileReaderStack : public FileReader {
+  /*
+  Not thread safe, two threads can get the same element from the stack, duplicating work.
+  */
+  
 private:
   FileReaderStack();
   std::string filepath;

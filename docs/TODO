@@ -11,4 +11,9 @@ add make_dictionary.sh to the make file. (possibly add a clean step to remove th
 clean up the LevenshteinChecker inheritance diagram. It makes more sense that they should use composition instead
 as the only method thats changing is the levenshteinDistance calculation.
 
+update the threadpool class so that instead of passing a string for constructing the checker,
+pass a pre-configured factory.
+
+create a threadsafe FileReaderStack. Probably only need a lock on getUnparsedString.
+
 set up jenkins for CI
