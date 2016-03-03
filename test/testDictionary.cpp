@@ -9,7 +9,7 @@
 #include "../src/sources/Dictionary.cpp"
 
 BOOST_AUTO_TEST_CASE(testDictionary) {
-  Dictionary* d = new Dictionary("/home/jeff/levenshtein-c/config/dictionary.txt");
+  Dictionary* d = new Dictionary("config/dictionary.txt");
 
   //these tests are kinda bad. They are very fragile.
   BOOST_CHECK(d->getSize() >= 99171);

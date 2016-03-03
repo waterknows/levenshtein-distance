@@ -25,11 +25,12 @@ clean:
 	@echo " $(RM) -r $(BUILDDIR) $(TARGET)"; $(RM) -r $(BUILDDIR) $(TARGET)
 
 # Tests
-tester:
+tests:
 	$(CC) $(CFLAGS) test/testFileReaderStack.cpp $(INC) $(LIB) -o bin/tests/fileReaderStack
 	$(CC) $(CFLAGS) test/testFileReaderStdOut.cpp $(INC) $(LIB) -o bin/tests/fileReaderStdOut
 	$(CC) $(CFLAGS) test/testLevensteinDistance.cpp $(INC) $(LIB) -o bin/tests/levenshteinDistance
 	$(CC) $(CFLAGS) test/testDictionary.cpp $(INC) $(LIB) -o bin/tests/dictionary
 	$(CC) $(CFLAGS) test/testThreading.cpp $(INC) $(LIB) -o bin/tests/threading
+	
 
 .PHONY: clean

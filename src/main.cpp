@@ -13,7 +13,7 @@
 #include "./headers/ThreadPool.h"
 
 main() {
-  auto f1 = new FileReaderStack("./config/strings.txt");
+  auto f1 = new FileReaderStack("./config/test_strings.txt");
   auto dict = new Dictionary("./config/dictionary.txt");
   f1->readFile();
 

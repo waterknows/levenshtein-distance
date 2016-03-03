@@ -10,7 +10,7 @@
 #include "../src/sources/FileReaderStdOut.cpp"
 
 BOOST_AUTO_TEST_CASE(testFileReaderStdOut) {
-  FileReader* f = new FileReaderStdOut("/home/jeff/levenshtein-c/bin/test.txt");
+  FileReader* f = new FileReaderStdOut("test.txt");
   std::cout << f->getFilePath() << std::endl;
 
   f->readFile();
