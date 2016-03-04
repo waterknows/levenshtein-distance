@@ -62,4 +62,5 @@ BOOST_AUTO_TEST_CASE(testDictionary) {
 
   std::cout << "unsafe: " << (*i) << std::endl;
   std::cout << "safe: " << (*j) << std::endl;
+  BOOST_CHECK(*j == 50000000);
 }

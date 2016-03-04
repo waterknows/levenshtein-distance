@@ -1,7 +1,6 @@
 Fix up test cases - make them more robust
 
-#make file todos
-update makefile to run all tests in the test/ folder
+# make file todos
 update makefile to allow a optional parameter for a release version (exclude -g from the g++ line)
 
 # code related todos
@@ -12,4 +11,3 @@ clean up the LevenshteinChecker inheritance diagram. It makes more sense that th
 update the threadpool class so that instead of passing a string for constructing the checker,
 	pass a pre-configured factory.
 create a threadsafe FileReaderStack. Probably only need a lock on getUnparsedString.
-

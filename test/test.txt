@@ -1,2 +1,0 @@
-this is the second test string
-this is a test string

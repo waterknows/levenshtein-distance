@@ -10,7 +10,7 @@
 #include "../src/sources/FileReaderStack.cpp"
 
 BOOST_AUTO_TEST_CASE(testFileReaderStdOut) {
-  FileReaderStack* f = new FileReaderStack("test.txt");
+  FileReaderStack* f = new FileReaderStack("config/test.txt");
   std::cout << f->getFilePath() << std::endl;
 
   f->readLine();
